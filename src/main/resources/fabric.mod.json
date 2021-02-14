@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "cf4m",
+  "name": "CF4M",
+  "version": "1.4.2",
+  "environment": "*",
+  "license": "Apache-2.0",
+  "icon": "assets/cf4m/icon.png",
+  "contact": {
+    "homepage": "https://cf4m.enaium.cn",
+    "issues": "https://github.com/cf4m/cf4m-fabric/issues",
+    "sources": "https://github.com/cf4m/cf4m-fabric"
+  },
+  "authors": [
+    "Enaium"
+  ],
+  "description": "Client Framework for Minecraft.",
+  "custom": {
+    "modmenu": {
+      "badges": [ "library" ]
+    }
+  }
+}
