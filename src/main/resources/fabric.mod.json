@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "cf4m",
   "name": "CF4M",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "environment": "*",
   "license": "Apache-2.0",
   "icon": "assets/cf4m/icon.png",
