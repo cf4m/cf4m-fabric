@@ -14,4 +14,4 @@
 
 ### [or Releases](https://github.com/cf4m/cf4m-fabric/releases)
 
-[![Releases](https://img.shields.io/github/v/release/cf4m/cf4m?style=flat-square)](https://github.com/cf4m/cf4m-fabric/releases)
+[![Releases](https://img.shields.io/github/v/release/cf4m/cf4m-fabric?style=flat-square)](https://github.com/cf4m/cf4m-fabric/releases)
