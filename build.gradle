@@ -12,7 +12,7 @@ allprojects {
 }
 
 group 'cn.enaium.cf4m'
-version '1.4.10'
+version '1.4.11'
 
 repositories {
     mavenCentral()
@@ -21,6 +21,19 @@ repositories {
 dependencies {
     implementation("cn.enaium.cf4m:cf4m:${version}") {
         exclude group: 'com.google.guava', module: 'guava'
+    }
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include "fabric.mod.json"
+        expand "version": project.version
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude "fabric.mod.json"
     }
 }
 

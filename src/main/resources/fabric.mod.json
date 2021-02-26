@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "cf4m",
   "name": "CF4M",
-  "version": "1.4.10",
+  "version": "${version}",
   "environment": "*",
   "license": "Apache-2.0",
   "icon": "assets/cf4m/icon.png",
@@ -17,7 +17,9 @@
   "description": "Client Framework for Minecraft.",
   "custom": {
     "modmenu": {
-      "badges": [ "library" ]
+      "badges": [
+        "library"
+      ]
     }
   }
 }
