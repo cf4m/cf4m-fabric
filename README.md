@@ -10,7 +10,7 @@
 
 ### [or JitPack](https://jitpack.io/#cf4m/cf4m-fabric)
 
-[![JitPack](https://img.shields.io/jitpack/v/github/cf4m/cf4m?style=flat-square)](https://jitpack.io/#cf4m/cf4m-fabric)
+[![JitPack](https://img.shields.io/jitpack/v/github/cf4m/cf4m-fabric?style=flat-square)](https://jitpack.io/#cf4m/cf4m-fabric)
 
 ### [or Releases](https://github.com/cf4m/cf4m-fabric/releases)
 
