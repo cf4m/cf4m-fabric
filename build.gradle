@@ -12,16 +12,14 @@ allprojects {
 }
 
 group 'cn.enaium.cf4m'
-version '1.8.3'
+version '1.9.1'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation("cn.enaium.cf4m:cf4m:${version}") {
-        exclude group: 'com.google.guava', module: 'guava'
-    }
+    implementation("cn.enaium.cf4m:cf4m:${version}")
 }
 
 processResources {
