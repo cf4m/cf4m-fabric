@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'maven'
+    id 'maven-publish'
     id "com.github.johnrengelman.shadow" version "4.0.4"
 }
 
@@ -12,26 +12,21 @@ allprojects {
 }
 
 group 'cn.enaium.cf4m'
-version '1.9.6'
+version '1.9.7'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation("cn.enaium.cf4m:cf4m:${version}")
+    implementation shadow("cn.enaium.cf4m:cf4m:${version}")
 }
 
 processResources {
     inputs.property "version", project.version
 
-    from(sourceSets.main.resources.srcDirs) {
-        include "fabric.mod.json"
+    filesMatching("fabric.mod.json") {
         expand "version": project.version
-    }
-
-    from(sourceSets.main.resources.srcDirs) {
-        exclude "fabric.mod.json"
     }
 }
 
@@ -41,15 +36,22 @@ shadowJar {
     }
 }
 
-uploadArchives {
-    repositories.mavenDeployer {
-        def MAVEN_URL = System.getenv('MAVEN_URL')
-        if (MAVEN_URL != null) {
-            repository(url: "file://${new File(MAVEN_URL)}")
+publishing {
+    repositories {
+        def ENV = System.getenv()
+        if (ENV.MAVEN_URL) {
+            maven {
+                url ENV.MAVEN_URL
+            }
+        }
+    }
+
+    publications {
+        mavenJava(MavenPublication) { publication ->
+            groupId project.group
+            artifactId project.name
+            version project.version
+            project.shadow.component(publication)
         }
     }
 }
-
-artifacts { archives shadowJar }
-
-build.dependsOn shadowJar
